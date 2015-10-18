@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_window"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/topLayout"
+        android:layout_above="@+id/tableLayout">
+    </RelativeLayout>
+
+    <!-- stretch column #3 seek bar (taking from zero) -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tableLayout"
+        android:layout_alignParentBottom="true"
+        android:stretchColumns="2">
+
+        <TableRow>
+            <TextView
+                android:text="@string/hue"/>
+            <TextView
+                android:text="@string/one"/>
+            <SeekBar
+                android:id="@+id/seekBar"/>
+            <TextView
+                android:text="@string/zero"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="@string/saturation"/>
+            <TextView
+                android:text="@string/zero"/>
+            <SeekBar
+                android:id="@+id/seekBarS"/>
+            <TextView
+                android:text="@string/one"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="@string/value"/>
+                <TextView
+                    android:text="@string/one"/>
+                <SeekBar
+                    android:id="@+id/seekBarV" />
+                <TextView
+                    android:text="@string/zero"/>
+            </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>
